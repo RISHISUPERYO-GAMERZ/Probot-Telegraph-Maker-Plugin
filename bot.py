@@ -35,11 +35,11 @@ async def uploadphoto(client, message):
   userid = str(message.chat.id)
   img_path = (f"./DOWNLOADS/{userid}.jpg")
   img_path = await client.download_media(message=message, file_name=img_path)
-  await msg.edit_text("`I HAVE DOWNLOADED THE PHOTO🥳🥳, sending u ⚡`")
+  await msg.edit_text("")
   try:
     tlink = upload_file(img_path)
   except:
-    await msg.edit_text("`Something went wrong`") 
+    await msg.edit_text("`kuch garbar hogayi bro / sis") 
   else:
     await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
     os.remove(img_path) 
@@ -47,11 +47,11 @@ async def uploadphoto(client, message):
 @Tgraph.on_message(filters.animation)
 async def uploadgif(client, message):
   if(message.animation.file_size < 5242880):
-    msg = await message.reply_text("`WAIT AND EK MANTRA DE RAHA WOH BOL MUJHE:- 𝓢𝓐𝓚𝓐 𝓛𝓐𝓚𝓐 𝓑𝓞𝓞𝓜 𝓑𝓞𝓞𝓜`")
+    msg = await message.reply_text("")
     userid = str(message.chat.id)
     gif_path = (f"./DOWNLOADS/{userid}.mp4")
     gif_path = await client.download_media(message=message, file_name=gif_path)
-    await msg.edit_text("`Sending😎 Plz wait 😂⚡`")
+    await msg.edit_text("")
     try:
       tlink = upload_file(gif_path)
       await msg.edit_text(f"https://telegra.ph{tlink[0]}")   
@@ -64,11 +64,11 @@ async def uploadgif(client, message):
 @Tgraph.on_message(filters.video)
 async def uploadvid(client, message):
   if(message.video.file_size < 5242880):
-    msg = await message.reply_text("`r͛u͛k͛o͛ z͛a͛r͛a͛ s͛a͛b͛a͛r͛ k͛a͛r͛o͛😂😂😂`")
+    msg = await message.reply_text("")
     userid = str(message.chat.id)
     vid_path = (f"./DOWNLOADS/{userid}.mp4")
     vid_path = await client.download_media(message=message, file_name=vid_path)
-    await msg.edit_text("`Lo abh finnally bhej raha😂`")
+    await msg.edit_text("")
     try:
       tlink = upload_file(vid_path)
       await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
